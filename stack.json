@@ -1,0 +1,201 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2025-07-05T19:45:44.576919439Z",
+            "magic": "6a5f1cff8ef65523800fc5c9de7d17699a6e5b813cf7d2dab78054c0abf00cfc",
+            "version": "v3.178.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "andremigotto-org",
+                "project": "rocketseat.iac",
+                "stack": "stg"
+            }
+        },
+        "metadata": {},
+        "resources": [
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "bucketArn": "arn:aws:s3:::rocketseat-migotto-pulumi-teste",
+                    "bucketInfo": "rocketseat-migotto-pulumi-teste",
+                    "bucketName": "rocketseat-migotto-pulumi-teste",
+                    "ecrArn": "arn:aws:ecr:us-east-2:955564822799:repository/rocketseat-migotto-pulumi-teste",
+                    "ecrName": "rocketseat-migotto-pulumi-teste",
+                    "ecrRepositoryUrl": "955564822799.dkr.ecr.us-east-2.amazonaws.com/rocketseat-migotto-pulumi-teste"
+                },
+                "created": "2025-07-05T17:01:36.299424223Z",
+                "modified": "2025-07-05T17:01:36.299424223Z",
+                "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.181.0_typescript@5.8.3/node_modules/@pulumi/runtime/stack.ts#37,19"
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_6_83_0",
+                "custom": true,
+                "id": "6e24bbf9-1ca1-4a11-b5d5-70784f58742f",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.83.0"
+                },
+                "outputs": {
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.83.0"
+                },
+                "created": "2025-07-05T17:01:42.285523967Z",
+                "modified": "2025-07-05T17:01:42.285523967Z"
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::aws:ecr/repository:Repository::rocketseat-migotto-pulumi-teste",
+                "custom": true,
+                "id": "rocketseat-migotto-pulumi-teste",
+                "type": "aws:ecr/repository:Repository",
+                "inputs": {
+                    "__defaults": [],
+                    "imageTagMutability": "IMMUTABLE",
+                    "name": "rocketseat-migotto-pulumi-teste",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":1200000000000}}",
+                    "arn": "arn:aws:ecr:us-east-2:955564822799:repository/rocketseat-migotto-pulumi-teste",
+                    "encryptionConfigurations": [
+                        {
+                            "encryptionType": "AES256",
+                            "kmsKey": ""
+                        }
+                    ],
+                    "forceDelete": null,
+                    "id": "rocketseat-migotto-pulumi-teste",
+                    "imageScanningConfiguration": {
+                        "scanOnPush": false
+                    },
+                    "imageTagMutability": "IMMUTABLE",
+                    "name": "rocketseat-migotto-pulumi-teste",
+                    "registryId": "955564822799",
+                    "repositoryUrl": "955564822799.dkr.ecr.us-east-2.amazonaws.com/rocketseat-migotto-pulumi-teste",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "parent": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "provider": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_6_83_0::6e24bbf9-1ca1-4a11-b5d5-70784f58742f",
+                "propertyDependencies": {
+                    "imageTagMutability": [],
+                    "name": [],
+                    "tags": []
+                },
+                "created": "2025-07-05T17:01:43.092876746Z",
+                "modified": "2025-07-05T17:01:43.092876746Z",
+                "sourcePosition": "project:///index.ts#13,13"
+            },
+            {
+                "urn": "urn:pulumi:stg::rocketseat.iac::aws:s3/bucketV2:BucketV2::rocketseat-migotto-pulumi-teste",
+                "custom": true,
+                "id": "rocketseat-migotto-pulumi-teste",
+                "type": "aws:s3/bucketV2:BucketV2",
+                "inputs": {
+                    "__defaults": [
+                        "forceDestroy"
+                    ],
+                    "bucket": "rocketseat-migotto-pulumi-teste",
+                    "forceDestroy": false,
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::rocketseat-migotto-pulumi-teste",
+                    "bucket": "rocketseat-migotto-pulumi-teste",
+                    "bucketDomainName": "rocketseat-migotto-pulumi-teste.s3.amazonaws.com",
+                    "bucketPrefix": "",
+                    "bucketRegionalDomainName": "rocketseat-migotto-pulumi-teste.s3.us-east-2.amazonaws.com",
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "f929b5bb924f201bea3ba36a5eb969e7885d6f0543c9e2bb1c0e9f910cf1e2c6",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": "Z2O1EMRO9K5GLX",
+                    "id": "rocketseat-migotto-pulumi-teste",
+                    "lifecycleRules": [],
+                    "loggings": [],
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": false,
+                    "policy": "",
+                    "region": "us-east-2",
+                    "replicationConfigurations": [],
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfigurations": [
+                        {
+                            "rules": [
+                                {
+                                    "applyServerSideEncryptionByDefaults": [
+                                        {
+                                            "kmsMasterKeyId": "",
+                                            "sseAlgorithm": "AES256"
+                                        }
+                                    ],
+                                    "bucketKeyEnabled": false
+                                }
+                            ]
+                        }
+                    ],
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    },
+                    "versionings": [
+                        {
+                            "enabled": false,
+                            "mfaDelete": false
+                        }
+                    ],
+                    "websiteDomain": null,
+                    "websiteEndpoint": null,
+                    "websites": []
+                },
+                "parent": "urn:pulumi:stg::rocketseat.iac::pulumi:pulumi:Stack::rocketseat.iac-stg",
+                "provider": "urn:pulumi:stg::rocketseat.iac::pulumi:providers:aws::default_6_83_0::6e24bbf9-1ca1-4a11-b5d5-70784f58742f",
+                "propertyDependencies": {
+                    "bucket": [],
+                    "tags": []
+                },
+                "created": "2025-07-05T17:01:44.069552462Z",
+                "modified": "2025-07-05T17:01:44.069552462Z",
+                "sourcePosition": "project:///index.ts#6,21"
+            }
+        ]
+    }
+}
