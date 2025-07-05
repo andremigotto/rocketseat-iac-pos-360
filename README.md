@@ -1,4 +1,4 @@
- # AWS TypeScript Pulumi Template
+ # AWS TypeScript Pulumi Template STG
 
  A minimal Pulumi template for provisioning AWS infrastructure using TypeScript. This template creates an Amazon S3 bucket and exports its name.
 
