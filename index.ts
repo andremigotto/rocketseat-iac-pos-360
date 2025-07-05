@@ -10,6 +10,13 @@ const bucket = new aws.s3.BucketV2("rocketseat-migotto-pulumi-teste", {
     },
 });
 
+const secondBucket = new aws.s3.BucketV2("rocketseat-migotto-pulumi-teste", {
+    bucket: "second-rocketseat-migotto-pulumi-teste",
+    tags: {
+        IAC: "true"
+    },
+});
+
 const ecr = new aws.ecr.Repository("rocketseat-migotto-pulumi-teste", {
     name: "rocketseat-migotto-pulumi-teste",
     imageTagMutability: "IMMUTABLE",
@@ -22,6 +29,10 @@ const ecr = new aws.ecr.Repository("rocketseat-migotto-pulumi-teste", {
 export const bucketName = bucket.id;
 export const bucketInfo = bucket.bucket;
 export const bucketArn = bucket.arn;
+
+export const secondBucketName = secondBucket.id;
+export const secondBucketInfo = secondBucket.bucket;
+export const secondBucketArn = secondBucket.arn;
 
 export const ecrName = ecr.name;
 export const ecrRepositoryUrl = ecr.repositoryUrl;
