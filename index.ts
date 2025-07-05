@@ -10,7 +10,7 @@ const firstBucket = new aws.s3.BucketV2("rocketseat-migotto-pulumi-teste", {
     },
 });
 
-const secondBucket = new aws.s3.BucketV2("rocketseat-migotto-pulumi-teste", {
+const secondBucket = new aws.s3.BucketV2("second-rocketseat-migotto-pulumi-teste", {
     bucket: "second-rocketseat-migotto-pulumi-teste",
     tags: {
         IAC: "true"
