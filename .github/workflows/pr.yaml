@@ -42,7 +42,7 @@ jobs:
             uses: pulumi/actions@v6
             with:
               command: preview
-              stack-name: rocketseat.iac/stg
+              stack-name: stg
               cloud-url: s3://pulumi-state-migotto-360
 
             env:
