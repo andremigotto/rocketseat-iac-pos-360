@@ -42,6 +42,10 @@ jobs:
             uses: pulumi/actions@v6
             with:
               command: up
-              stack-name: andremigotto-org/stg
+              stack-name: stg
+              cloud-url: s3://pulumi-state-migotto-360
             env:
-              PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+              AWS_ACESS_KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+              AWS_REGION: ${{ secrets.AWS_REGION }}
+              PULUMI_CONFIG_PASSPHRASE: ""
